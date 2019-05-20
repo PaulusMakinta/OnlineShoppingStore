@@ -1,0 +1,50 @@
+﻿@model OnlineHoppingStore.Domain.Entities.ShippingDetails
+
+@{
+    /**/
+
+    ViewBag.Title = "Online Shopping Store: CheckOut ";
+}
+
+<h2>Check Out Now</h2>
+<p> Please Enter Your Details we wil Deliver Your Goods In 7 Working Days</p>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <h3>Ship To:</h3>
+    <div class="form-group">
+        <label>Name:</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+
+    <h3>Address</h3>
+
+
+    foreach(var property in ViewData.ModelMetadata.Properties)
+    {
+        if(property.PropertyName != "Name" && property.PropertyName != "GiftWrap")
+        {
+            <div class="form-group">
+                <label>
+                    @(property.DisplayName ?? property.PropertyName)
+                </label>
+                @Html.TextBox(property.PropertyName, null, new { @class="form-control"})
+            </div>
+        }
+    }
+
+
+
+        <h2>Options</h2>
+        <label>
+            @Html.EditorFor(x => x.GiftWrap)
+            Gift wrap these Items
+        </label>
+    
+
+    <div class="text-center">
+        <input type="submit" value="Complete Order" class="btn btn-primary" />
+    </div>
+
+}

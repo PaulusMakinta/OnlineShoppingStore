@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="OnlineShoppingStoreWebUi123" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\eddy7\\source\\repos\\OnlineShoppingStore\\OnlineShoppingStore\.WebUi\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\eddy7\\source\\repos\\OnlineShoppingStore\\OnlineShoppingStore\.WebUi\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="EFDbContext-Web.config Connection String" description="" value="Data Source=tcp:onlineshoppingstorewebui123dbserver.database.windows.net,1433;Initial Catalog=OnlineShoppingStoreWebUi123_dbServer;User Id=Paulus@onlineshoppingstorewebui123dbserver;Password=Hemsleys092011?" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\eddy7\\source\\repos\\OnlineShoppingStore\\OnlineShoppingStore\.WebUi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EFDbContext']/@connectionString" />
+  </parameter>
+</parameters>
